@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-int checkprime(int n)
+int checking(int n)
 {
     if (n <= 1)
         return 0;
@@ -27,7 +27,7 @@ int main()
         {
             cout << 0 << " ";
         }
-        else if (checkprime(newterm) == 0)
+        else if (checking(newterm) == 0)
         {
             cout << 0 << " ";
         }

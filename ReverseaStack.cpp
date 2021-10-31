@@ -5,7 +5,7 @@ using namespace std;
 
 // using std::stack for
 // stack implementation
-stack<char> st;
+stack<char> strt;
 
 // initializing a string to store
 // result of reversed stack
@@ -17,8 +17,8 @@ string ns;
 char insert_at_bottom(char x)
 {
 
-	if(st.size() == 0)
-	st.push(x);
+	if(strt.size() == 0)
+	strt.push(x);
 
 	else
 	{
@@ -30,15 +30,15 @@ char insert_at_bottom(char x)
 		// part is executed and the item is
 		// inserted at the bottom
 			
-		char a = st.top();
-		st.pop();
+		char a = strt.top();
+		strt.pop();
 		insert_at_bottom(x);
 
 		// push allthe items held in
 		// Function Call Stack
 		// once the item is inserted
 		// at the bottom
-		st.push(a);
+		strt.push(a);
 	}
 }
 
@@ -47,14 +47,14 @@ char insert_at_bottom(char x)
 // insert_at_bottom()
 char reverse()
 {
-	if(st.size()>0)
+	if(strt.size()>0)
 	{
 		
 		// Hold all items in Function
 		// Call Stack until we
 		// reach end of the stack
-		char x = st.top();
-		st.pop();
+		char x = strt.top();
+		strt.pop();
 		reverse();
 		
 		// Insert all the items held
@@ -72,10 +72,10 @@ int main()
 	
 	// push elements into
 	// the stack
-	st.push('1');
-	st.push('2');
-	st.push('3');
-	st.push('4');
+	strt.push('1');
+	strt.push('2');
+	strt.push('3');
+	strt.push('4');
 	
 	cout<<"Original Stack"<<endl;
 	
@@ -93,10 +93,10 @@ int main()
 	
 	// storing values of reversed
 	// stack into a string for display
-	while(!st.empty())
+	while(!strt.empty())
 	{
-		char p=st.top();
-		st.pop();
+		char p=strt.top();
+		strt.pop();
 		ns+=p;
 	}
 	

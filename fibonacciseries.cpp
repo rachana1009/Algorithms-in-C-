@@ -4,24 +4,24 @@
 #include <iostream>
 using namespace std;
 
-int checking(int n)
+int checking(int num)
 {
-    if (n <= 1)
+    if (num <= 1)
         return 0;
-    for (int i = 2; i < n; i++)
-        if (n % i == 0)
+    for (int i = 2; i < num; i++)
+        if (num % i == 0)
             return 1;
     return 0;
 }
 //the main calling function...
 int main()
 {
-    int i, num;
-    int first = 0, second = 1;
-    int newterm = first + second;
-    cin >> num;
+    int i, number;
+    int first1 = 0, second = 1;
+    int newterm = first1 + second;
+    cin >> number;
     cout << second << " ";
-    for (i = 3; i <= num + 1; ++i)
+    for (i = 3; i <= number + 1; ++i)
     {
         if (newterm % 5 == 0)
         {
@@ -35,8 +35,8 @@ int main()
         {
             cout << newterm << " ";
         }
-        first = second;
+        first1 = second;
         second = newterm;
-        newterm = second + first;
+        newterm = second + first1;
     }
 }

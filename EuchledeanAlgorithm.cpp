@@ -4,20 +4,20 @@
 #include <iostream>
 using namespace std;
 
-int EuchledeanAlgorithm(int a,int b)
+int EuchledeanAlgorithm(int ae,int be)
 {
-    if(b==0)
-    return a;
+    if(be==0)
+    return ae;
     else 
     {
-         return EuchledeanAlgorithm(b,a%b);
+         return EuchledeanAlgorithm(be,ae%be);
     }
 }
 
 
 int main() {
-    int a=4,b=6,res;
-    res=EuchledeanAlgorithm(a,b);
-    cout<<res<<endl;
+    int ae=4,be=6,resr;
+    resr = EuchledeanAlgorithm(ae,be);
+    cout<<resr<<endl;
     return 0;
 }

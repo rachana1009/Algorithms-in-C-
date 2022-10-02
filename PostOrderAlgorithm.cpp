@@ -1,9 +1,8 @@
-// C++ program for different tree traversals
-#include <iostream>
+
+
+#include<bits/stdc++.h>
 using namespace std;
 
-/* A binary tree node has data, pointer to left child
-and a pointer to right child */
 struct Node {
 	int datax;
 	struct Node *lefter, *righter;
@@ -14,8 +13,6 @@ struct Node {
 	}
 };
 
-/* Given a binary tree, print its nodes according to the
-"bottom-up" postorder traversal. */
 void printPostorder(struct Node* node1)
 {
 	if (node1 == NULL)
@@ -63,7 +60,6 @@ void printPreorder(struct Node* node1)
 	printPreorder(node1->righter);
 }
 
-/* Driver program to test above functions*/
 int main()
 {
 	struct Node* root = new Node(1);

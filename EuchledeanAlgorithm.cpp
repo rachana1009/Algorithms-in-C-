@@ -1,6 +1,4 @@
-// naive approach is to find the minimum of the two numbers and keep trying smaller smaller numbers
-// Also to find the lcm use gcd to calculate it i.e. lcm=a*b/gcd
-
+#include<bits/stdc++.h>
 #include <iostream>
 using namespace std;
 
